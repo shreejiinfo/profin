@@ -14,8 +14,8 @@
         <script type='text/javascript' src='/Admin/dwr/engine.js'></script>
         <script type='text/javascript' src='/Admin/dwr/interface/EvaluationAjax.js'></script>
         <script type='text/javascript' src='/Admin/dwr/util.js'></script>
-        <script type='text/javascript' src='../js/jquery-1.9.1.min.js'></script>
-        <script type='text/javascript' src='../js/jquery.validate.js'></script>
+        <script type='text/javascript' src='js/jquery-1.11.1.js'></script>
+        <script type='text/javascript' src='js/jquery.validate.js'></script>
         <script type="text/javascript">
             var LoadCountry = function(data) {
 //                alert();
@@ -37,16 +37,8 @@
             }
             
             $(document).ready(function(){
-                alert("hello");
-                //RegValidation();
-                
                 $("#btnSubmit").click(function(){
-                    alert("hello");
-                    if($("#f1").valid()){
-                        $("#f1").submit();
-                    }else{
-                        alert("invalid");
-                    }
+                    $("#f1").submit();
                 });
             });
             
@@ -56,7 +48,7 @@
 
 
     <body onload="EvaluationAjax.countryShow(LoadCountry)">
-        <form action="${pageContext.request.contextPath}/RegistrationServlet" name="f1" method="post" id="f1">
+        <form action="${pageContext.request.contextPath}/RegistrationServlet" method="post" id="f1">
         <%@include file="header.jsp" %>
 
         <div class="clear"></div>
