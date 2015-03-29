@@ -36,10 +36,12 @@ public class AdminLoginServlet extends HttpServlet {
         System.out.println("UserName:===="+lbean.getUsername());
         System.out.println("Password:===="+lbean.getPassword());
         
-        boolean flag=AdminLoginDao.loginAutho(lbean);
+        int id=AdminLoginDao.loginAutho(lbean);
         
         HttpSession session = request.getSession();
-        if(flag)
+        session.setAttribute("id", id);
+         System.out.println("id===="+id);
+        if(id>0)
         {
 //            request.setAttribute("user", username);
             RequestDispatcher rd=request.getRequestDispatcher("Admin/home.jsp");

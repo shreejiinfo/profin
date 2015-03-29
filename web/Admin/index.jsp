@@ -5,12 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Login Form</title>
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/Admin/css/screen.css" type="text/css" media="screen" title="default" />
 
 <script src="js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
 
@@ -24,9 +25,10 @@ $(document).ready(function(){
 $(document).pngFix( );
 });
 </script>
+
 </head>
 <body id="login-bg"> 
- 
+    
     <form name="f1" action="${pageContext.request.contextPath}/AdminLoginServlet" method="post">
 <div id="login-holder">
 
@@ -50,7 +52,7 @@ $(document).pngFix( );
 		</tr>
 		<tr>
 			<th>Password</th>
-                        <td><input type="password" value="************" name="password"  onfocus="this.value=''" class="login-inp" /></td>
+                        <td><input type="password" value="" name="password"  onfocus="this.value=''" class="login-inp" /></td>
 		</tr>
 		<tr>
 			<th></th>

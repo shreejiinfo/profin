@@ -40,6 +40,8 @@ public class LoginServlet extends HttpServlet {
         int id = RegistrationDao.dept(lbean);
 
         HttpSession session = request.getSession();
+        session.setAttribute("id", id);
+         System.out.println("id===="+id);
         if (id == 1) {
             session.setAttribute("id", id);
             RequestDispatcher rd = request.getRequestDispatcher("ophomepage.jsp");

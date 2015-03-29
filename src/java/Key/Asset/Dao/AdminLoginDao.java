@@ -23,7 +23,8 @@ public class AdminLoginDao {
     public static Statement smt = null;
     public static ResultSet rs = null;
 
-    public static boolean loginAutho(AdminLoginBean lbean) {
+    public static int loginAutho(AdminLoginBean lbean) {
+        int id=0;
         boolean flag = false;
         conn = ConnectionUtill.getconn();
         if (conn != null) {
@@ -45,7 +46,7 @@ public class AdminLoginDao {
             }
 
         }
-        return flag;
+        return id;
     }
 
     

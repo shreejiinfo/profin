@@ -5,7 +5,29 @@
 //* Author: Manjunath Baddi                     *//
 //* Title: Validation                           *//
 //***********************************************//
-var a,b;               
+var a,b;      
+function checkpass()
+{
+    var password=document.getElementById('password');
+    var re_enter_password=document.getElementById('re_enter_password');
+    
+    var message=document.getElementById('confirm message');
+    var goodcolor="#66cc66";
+    var badcolor="#ff6666";
+    
+    if(password.value == re_enter_password.value)
+    {
+        re_enter_password.style.backgroundColor=goodcolor;
+        message.style.color=goodcolor;
+        message.innerHTML="password Match";
+    }
+    else
+    {
+        re_enter_password.style.backgroundColor=badcolor;
+        message.style.color=badcolor;
+        message.innerHTML="password do not match";
+    }
+}
 function isalphanum(ele)
                 {
                     var r=/\W$/i;

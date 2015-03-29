@@ -213,7 +213,7 @@
                     <div class="nav-divider">&nbsp;</div>
                     <div class="showhide-account"><img src="${pageContext.request.contextPath}/Admin/images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" /></div>
                     <div class="nav-divider">&nbsp;</div>
-                    <a href="index.jsp" id="logout"><img src="${pageContext.request.contextPath}/Admin/images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
+                    <a href="LogoutServlet" id="logout"><img src="${pageContext.request.contextPath}/Admin/images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
                     <div class="clear">&nbsp;</div>
 
 

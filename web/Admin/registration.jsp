@@ -198,7 +198,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Re-enter Password *:</th>
-                                                    <td><input type="password" class="inp-form" name="re_enter_password" required="required"/></td>
+                                                    <td><input type="password" class="inp-form" name="re_enter_password" required="required" onblur="checkpass()"/></td>
 
                                                     <td></td>
                                                 </tr>
