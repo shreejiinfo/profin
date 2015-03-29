@@ -32,7 +32,7 @@
         <div>
             <div id="regbar">
                 <div id="navthing">
-                    <h2><a href="index.jsp" id="loginform" >Logout</a></h2>
+                    <h2><a href="index_2.jsp" id="loginform" >Logout</a></h2>
                    
                 </div>
             </div>
@@ -52,7 +52,7 @@
                                 <ul id="menu">
                                     <li class="nav1"><a href="ophomepage.jsp">Home</a></li>
                                     <li class="nav2"><a href="reports.jsp">Reports</a></li>
-                                    <li class="nav3"><a href="header.jsp">Add Asset</a></li>
+                                    <li class="nav3"><a href="header_1.jsp">Add Asset</a></li>
                                     <li class="nav4"><a href="allocation.jsp">Allocation</a></li>
                                     <li class="nav5"><a href="deallocation.jsp">Deallocation</a></li>
                                 </ul>

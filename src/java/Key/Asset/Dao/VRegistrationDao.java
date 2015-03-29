@@ -5,9 +5,9 @@
  */
 package Key.Asset.Dao;
 
-import Bean.Cust_registrationBean;
-import Bean.LoginBean;
-import Bean.RegistrationBean_1;
+import Key.Asset.Bean.Cust_registrationBean;
+import Key.Asset.Bean.LoginBean;
+import Key.Asset.Bean.RegistrationBean;
 import static Key.Asset.Dao.LoginDao.rs;
 import static Key.Asset.Dao.LoginDao.smt;
 import java.sql.Connection;
@@ -28,7 +28,7 @@ public class VRegistrationDao {
     static ResultSet rs = null;
     static Statement smt = null;
 
-    public static boolean reg(RegistrationBean_1 rbean) {
+    public static boolean reg(RegistrationBean rbean) {
         boolean flag = false;
         try {
             conn = ConnectionUtill.getconn();

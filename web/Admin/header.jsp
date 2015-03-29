@@ -176,7 +176,7 @@
             <div id="page-top">
 
                 <div id="logo">
-                    <a href=""><img src="images\forms\admin-logo.gif" width="156" height="40" alt="" /></a>
+                    <a href=""><img src="..\Admin\images\forms\admin-logo.gif" width="156" height="40" alt="" /></a>
                 </div>
 
                 <div id="top-search">

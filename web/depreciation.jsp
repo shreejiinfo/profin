@@ -17,7 +17,7 @@
     </head>
     <body>
         
-        <%@include file="home.jsp" %>
+        <%@include file="opheader2.jsp" %>
         <form method="post" action="depreciationservlet" name="f1"  class="register">
              <d:if test="${user==null}">
                 <d:redirect url="depreciationinfoservlet"></d:redirect>

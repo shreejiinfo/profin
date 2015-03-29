@@ -34,7 +34,7 @@
         <div>
             <div id="regbar">
                 <div id="navthing">
-                    <h2><a href="index.jsp" id="loginform" >Logout</a></h2>
+                    <h2><a href="index_2.jsp" id="loginform" >Logout</a></h2>
                    
                 </div>
             </div>
@@ -53,11 +53,11 @@
                             
                             <nav>
                                 <ul id="menu">
-                                    <li class="nav1"><a href="ophomepage.jsp">Home</a></li>
-                                    <li class="nav2"><a href="ophomepage.jsp">Reports</a></li>
-                                    <li class="nav3"><a href="home1.jsp">Asset</a></li>
-                                    <li class="nav4"><a href="depreciation.jsp">Depreciation</a></li>
-                                    <li class="nav5"><a href="#page_5">Scrap</a></li>
+                                    <li class="nav1"><a href="purchasehome.jsp">Home</a></li>
+                                    <li class="nav2"><a href="vendor.jsp">Vendor</a></li>
+                                    <li class="nav3"><a href="">Asset</a></li>
+                                    <li class="nav4"><a href="quotation.jsp">Quotation</a></li>
+                                    <li class="nav5"><a href="#page_5">FAQ</a></li>
                                 </ul>
                             </nav>
                      

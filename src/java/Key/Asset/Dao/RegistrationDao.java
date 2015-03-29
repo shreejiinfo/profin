@@ -5,12 +5,15 @@
  */
 package Key.Asset.Dao;
 
+import Key.Asset.Bean.LoginBean;
 import Key.Asset.Bean.CustRegistrationBean;
 import Key.Asset.Bean.RegistrationBean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import Key.Asset.Utill.ConnectionUtill;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 /**
  *
@@ -20,7 +23,9 @@ public class RegistrationDao {
 
     static Connection conn = null;
     static PreparedStatement pst = null;
-    
+    static ResultSet rs = null;
+    static Statement smt = null;
+
 
     public static boolean reg(RegistrationBean rbean) {
         boolean flag = false;
@@ -72,6 +77,32 @@ public class RegistrationDao {
 
         }
         return flag;
+    }
+
+    
+    public static int dept(LoginBean lbean) {
+        int id = 0;
+
+        try {
+            conn = ConnectionUtill.getconn();
+            String username = lbean.getUsername();
+            String password = lbean.getPassword();
+            System.out.println("UserName ON DAO:====" +username);
+            System.out.println("Password ON DAO:====" +password); 
+
+            String cquery = "select department from registration where reg_email='" + username + "' and reg_password='" + password + "'";
+            smt=conn.createStatement();
+            rs = smt.executeQuery(cquery);
+             
+            while (rs.next()) {
+                id = Integer.parseInt(rs.getString(1));
+            }
+
+        } catch (SQLException se) {
+            System.out.println("Insertion Error......");
+
+        }
+        return id;
     }
 
     

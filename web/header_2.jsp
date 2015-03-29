@@ -30,6 +30,15 @@
    <form name="f1" method="post" action="LoginServlet">
     <body>
         
+        <div>
+            <div id="regbar">
+                <div id="navthing">
+                    <h2><a href="index_2.jsp" id="loginform" >Logout</a></h2>
+                   
+                </div>
+            </div>
+        </div>
+        
         <div class="header">
             <div class="extra">
                 <div id="page_1">
@@ -39,11 +48,11 @@
                            
                             <nav>
                                 <ul id="menu">
-                                    <li class="nav1"><a href="#page_2">Home</a></li>
-                                    <li class="nav2"><a href="#page_3">Vendor</a></li>
+                                    <li class="nav1"><a href="purchasehome.jsp">Home</a></li>
+                                    <li class="nav2"><a href="vendor.jsp">Vendor</a></li>
                                     <li class="nav3"><a href="#page_4">Asset</a></li>
-                                    <li class="nav4"><a href="#page_5">Quotation</a></li>
-                                    <li class="nav5"><a href="#page_6">Faq</a></li>
+                                    <li class="nav4"><a href="quotation.jsp">Quotation</a></li>
+                                    <li class="nav5"><a href="#page_6">FAQ</a></li>
                                 </ul>
                             </nav>
                         </header>

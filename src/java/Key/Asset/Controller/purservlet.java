@@ -6,7 +6,7 @@
 
 package Key.Asset.Controller;
 
-import Bean.purbean;
+import Key.Asset.Bean.purbean;
 import Key.Asset.Dao.purdao;
 import java.io.IOException;
 import java.io.PrintWriter;

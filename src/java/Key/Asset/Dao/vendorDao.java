@@ -6,8 +6,8 @@
 
 package Key.Asset.Dao;
 
-import Bean.RegistrationBean_1;
-import Bean.vendorassessmentBean;
+import Key.Asset.Bean.RegistrationBean;
+import Key.Asset.Bean.vendorassessmentBean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

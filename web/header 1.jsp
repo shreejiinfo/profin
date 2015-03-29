@@ -41,9 +41,9 @@
                                 <ul id="menu">
                                     <li class="nav1"><a href="ophomepage.jsp">Home</a></li>
                                     <li class="nav2"><a href="ophomepage.jsp">Reports</a></li>
-                                    <li class="nav3"><a href="electronics.jsp">electronics</a></li>
-                                    <li class="nav4"><a href="furniture.jsp">furniture</a></li>
-                                    <li class="nav5"><a href="machinery.jsp">machinery</a></li>
+                                    <li class="nav3"><a href="electronics.jsp">Electronics</a></li>
+                                    <li class="nav4"><a href="furniture.jsp">Furniture</a></li>
+                                    <li class="nav5"><a href="machinery.jsp">Machinery</a></li>
                                 </ul>
                             </nav>
                         </header>

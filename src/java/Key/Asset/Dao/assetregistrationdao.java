@@ -1,4 +1,6 @@
 /*
+
+
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -6,10 +8,10 @@
 
 package Key.Asset.Dao;
 
-import bean.Assetregistrationbean;
-import bean.Ftablebean;
-import bean.chairbean;
-import bean.printerbean;
+import Key.Asset.Bean.Assetregistrationbean;
+import Key.Asset.Bean.Ftablebean;
+import Key.Asset.Bean.chairbean;
+import Key.Asset.Bean.printerbean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

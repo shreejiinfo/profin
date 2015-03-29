@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<dwr>
+    <allow>
+        <convert converter="bean" match="Key.Asset.Bean.CityBean">
+            <!--<param name="exclude" value="cityId,cityName"/>-->
+        </convert>
+        <create creator="new" javascript="EvaluationAjax">
+            <param name="class" value="Key.Asset.Dao.AjaxDao"/>
+            
+        </create>
+    </allow>
+</dwr>

@@ -6,7 +6,7 @@
 
 package Key.Asset.Dao;
 
-import Bean.LoginBean;
+import Key.Asset.Bean.LoginBean;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

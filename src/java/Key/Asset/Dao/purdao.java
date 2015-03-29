@@ -6,7 +6,7 @@
 
 package Key.Asset.Dao;
 
-import Bean.purbean;
+import Key.Asset.Bean.purbean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

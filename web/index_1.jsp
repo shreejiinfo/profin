@@ -37,7 +37,7 @@
         <div>
             <div id="regbar">
                 <div id="navthing">
-                    <h2><a href="index.jsp" id="loginform" >Logout</a></h2>
+                    <h2><a href="index_2.jsp" id="loginform" >Logout</a></h2>
                    
                 </div>
             </div>

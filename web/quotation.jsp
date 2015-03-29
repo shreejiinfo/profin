@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Quotation Form</title>
     </head>
     <body>
-        
+        <%@include file="header_2.jsp" %>
        <div align="center">
 	<table border="2" cellpadding="0" cellspacing="0" width="624">
 		<tbody>

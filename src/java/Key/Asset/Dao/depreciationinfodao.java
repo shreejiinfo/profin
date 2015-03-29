@@ -6,9 +6,9 @@
 
 package Key.Asset.Dao;
 
-import bean.depreciationinfobean;
+import Key.Asset.Bean.depreciationinfobean;
 import Key.Asset.Utill.ConnectionUtill;
-import bean.depreciationinfobean;
+import Key.Asset.Bean.depreciationinfobean;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

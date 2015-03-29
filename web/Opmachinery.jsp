@@ -28,9 +28,18 @@
                     <th colspan="2" style="color: #abda0f; font-size: 25px; padding-left: 230px; ">Machinery Registration</th>
                 </tr>
                 <tr><td>&nbsp;</td></tr></table>
-
-            <input type="radio" name="gen" onclick="callMcqTxt()"><br>
+            
+            <table>
+                <tr>
+                    <td> Enter Asset Type:</td>
+                    <td><input type="radio" name="gen" value="Laptop"onclick="callMcqTxt()">Laptop</td>
+                <br>
+                <td><input type="radio" name="gen" value="Printer" ></td>
+                </tr>
+                
+                    
         
+            </table>
 
         <br>
         

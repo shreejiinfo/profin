@@ -6,7 +6,7 @@
 
 package Key.Asset.Controller;
 
-import bean.Ftablebean;
+import Key.Asset.Bean.Ftablebean;
 import Key.Asset.Dao.assetregistrationdao;
 import java.io.IOException;
 import java.io.PrintWriter;

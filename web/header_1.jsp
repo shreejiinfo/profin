@@ -39,11 +39,11 @@
                            
                             <nav>
                                 <ul id="menu">
-                                    <li class="nav1"><a href="ophomepage.jsp">Home</a></li>
-                                    <li class="nav2"><a href="ophomepage.jsp">Reports</a></li>
-                                    <li class="nav3"><a href="opelectronics.jsp">electronics</a></li>
-                                    <li class="nav4"><a href="opfurniture.jsp">furniture</a></li>
-                                    <li class="nav5"><a href="opmachinery.jsp">machinery</a></li>
+                                    <li class="nav1"><a href="ophomepage_1.jsp">Home</a></li>
+                                    <li class="nav2"><a href="ophomepage_1.jsp">Reports</a></li>
+                                    <li class="nav3"><a href="electronics.jsp">electronics</a></li>
+                                    <li class="nav4"><a href="furniture.jsp">furniture</a></li>
+                                    <li class="nav5"><a href="machinery.jsp">machinery</a></li>
                                 </ul>
                             </nav>
                         </header>

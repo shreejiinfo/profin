@@ -31,29 +31,15 @@
     <body>
         <form method="post" name="f1" action="LoginServlet">
             
-            
-        <div>
+            <div>
             <div id="regbar">
                 <div id="navthing">
-                    <h2><a href="#" id="loginform" >Login</a> | <a href="cust_registration.jsp" id="loginform"> Register </a></h2>
-                    <div class="login">
-                        <div class="">
-                        </div>
-                        <div class="formholder">
-                            <div class="randompad">
-                                <fieldset>
-                                    <label name="username">username</label>
-                                    <input type="text" name="username" value="" />
-                                    <label name="password">Password</label>
-                                    <input type="password" name="password" value="" />
-                                    <input type=submit name="login" value="Login" />
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
+                    <h2><a href="index_2.jsp" id="loginform" >Logout</a></h2>
+                   
                 </div>
             </div>
         </div>
+        
         <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
         <script src="login/js/index.js">
         </script>

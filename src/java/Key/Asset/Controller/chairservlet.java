@@ -6,7 +6,7 @@
 
 package Key.Asset.Controller;
 
-import bean.chairbean;
+import Key.Asset.Bean.chairbean;
 import Key.Asset.Dao.assetregistrationdao;
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -6,7 +6,7 @@
 
 package Key.Asset.Controller;
 
-import Bean.vendorassessmentBean;
+import Key.Asset.Bean.vendorassessmentBean;
 import Key.Asset.Dao.vendorDao;
 import java.io.IOException;
 import java.io.PrintWriter;

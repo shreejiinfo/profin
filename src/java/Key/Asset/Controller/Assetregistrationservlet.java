@@ -6,7 +6,7 @@
 
 package Key.Asset.Controller;
 
-import bean.Assetregistrationbean;
+import Key.Asset.Bean.Assetregistrationbean;
 import Key.Asset.Dao.assetregistrationdao;
 import java.io.IOException;
 import java.io.PrintWriter;

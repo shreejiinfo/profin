@@ -14,9 +14,10 @@
         <script type='text/javascript' src='/Admin/dwr/engine.js'></script>
         <script type='text/javascript' src='/Admin/dwr/interface/EvaluationAjax.js'></script>
         <script type='text/javascript' src='/Admin/dwr/util.js'></script>
-        <script type='text/javascript' src='js/jquery-1.11.1.js'></script>
-        <script type='text/javascript' src='js/jquery.validate.js'></script>
-        <script type="text/javascript">
+        <script type='text/javascript' src='Admin/js/jquery/validate.js'></script>
+            <script type='text/javascript' src='/Admin/js/validate.js'></script>
+
+        <script>
             var LoadCountry = function(data) {
 //                alert();
 //                dwr.util.removeAllOptions('country');
@@ -35,20 +36,11 @@
                 dwr.util.removeAllOptions('city1');
                 dwr.util.addOptions('city1', data, 'cityId', 'cityName');
             }
-            
-            $(document).ready(function(){
-                $("#btnSubmit").click(function(){
-                    $("#f1").submit();
-                });
-            });
-            
-          
-         
         </script>
 
 
     <body onload="EvaluationAjax.countryShow(LoadCountry)">
-        <form action="${pageContext.request.contextPath}/RegistrationServlet" method="post" id="f1">
+        <form action="${pageContext.request.contextPath}/RegistrationServlet" name="f1" method="post">
         <%@include file="header.jsp" %>
 
         <div class="clear"></div>
@@ -84,20 +76,13 @@
                                             <table border="0" cellpadding="0" cellspacing="0"  id="id-form">
                                                 <tr>
                                                     <th valign="top">Name *:</th>
-                                                    <td><input type="text" name="name" class="inp-form" required="required" /></td>
+                                                    <td><input type="text" name="name" class="inp-form" required="required" onkeyup="isalpha(this)" /></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Contact *:</th>
-                                                    <td><input type="text" name="contact" class="inp-form" maxlength="15" required="required" /></td>
+                                                    <td><input type="text" name="contact" class="inp-form" maxlength="15" required="required" onkeyup="isnum(this)" /></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <th valign="top">Street *:</th>
-                                                    <td>	
-                                                        <input type="text" name="street" class="inp-form" required="required"/>
-                                                    </td>
-                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Country *:</th>
@@ -127,6 +112,14 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
+                                                    <th valign="top">Street *:</th>
+                                                    <td>	
+                                                        <input type="text" name="street" class="inp-form" required="required"/>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                 
+                                                <tr>
                                                     <th valign="top">Department *:</th>
                                                     <td>	
                                                         <select  class="styledselect_form_1" name="department" required="required">
@@ -151,7 +144,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Date of joining *:</th>
-                                                    <td><input type="Date" class="inp-form" name="joining" required="required"/></td>
+                                                    <td><input type="Date" class="inp-form" name="joining" required="required" onchange="doj(this)"/></td>
 
                                                     <td></td>
                                                 </tr>
@@ -170,7 +163,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Birth date *:</th>
-                                                    <td><input type="Date" class="inp-form" name="birthdate" required="required"/></td>
+                                                    <td><input type="Date" class="inp-form" name="birthdate" required="required" onchange="dob(this)"/></td>
 
                                                     <td></td>
                                                 </tr>
@@ -193,7 +186,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Email *:</th>
-                                                    <td><input type="text" class="inp-form" name="email" required="required" id="email"/></td>
+                                                    <td><input type="text" class="inp-form" name="email" required="required"/></td>
 
                                                     <td></td>
                                                 </tr>
@@ -213,7 +206,7 @@
                                                 <tr>
                                                     <th>&nbsp;</th>
                                                     <td valign="top">
-                                                        <input type="button" value="" class="form-submit" id="btnSubmit"/>
+                                                        <input type="submit" value="" class="form-submit" />
                                                         <input type="reset" value="" class="form-reset"  />
                                                     </td>
                                                     <td></td>

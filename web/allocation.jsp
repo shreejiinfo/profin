@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="css/default1.css"/>
     </head>
     <body>
-       <%@include file="header.jsp" %>
+        <%@include file="opheader3.jsp" %>
         <form method="post" action="Assetregistrationservlet" name="f1"  class="register">
             <table align="center">
                 <tr> 

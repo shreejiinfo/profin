@@ -6,9 +6,9 @@
 
 package Key.Asset.Dao;
 
-import Bean.VCityBean;
-import Bean.VCountryBean;
-import Bean.VStateBean;
+import Key.Asset.Bean.VCityBean;
+import Key.Asset.Bean.VCountryBean;
+import Key.Asset.Bean.VStateBean;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
