@@ -47,6 +47,7 @@ public class AdminLoginServlet extends HttpServlet {
            
         }
         else{
+            request.setAttribute("msg","invalid username or password");
             RequestDispatcher rd=request.getRequestDispatcher("Admin/index.jsp");
             rd.forward(request, response);
         }

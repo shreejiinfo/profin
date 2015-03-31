@@ -35,7 +35,7 @@
                                     
                                     <td id="fnts" name="asset_name">Asset name:</td>
                                     <td>
-                                <select>
+                                <select id="asset_name">
                                         <option>select</option>
                                     <d:forEach items="${user}" var="userlist">
                                             <option>${userlist.asset_name}</option>
@@ -47,10 +47,10 @@
                                 <tr>
                                     <td id="fnts" name="price">Asset price:</td>
                                     <td>
-                                <select>
+                                <select id="asset_price">
                                     <option>select</option>
-                                <d:forEach items="${userlist}" var="userlist">
-                                    <option ${userlist.price}</option>
+                                <d:forEach items="${user}" var="userlist">
+                                    <option>${userlist.price}</option>
                                 </d:forEach>  
                                 </td>
                                 </tr>
@@ -58,17 +58,17 @@
                                 
                                 <tr>
                                     <td id="fnts" name="salvage_value">Salvage value:</td>
-                                    <td><input type="text" name="salvage_value" id="txt2" required="required"/></td>
+                                    <td><input type="text" name="salvage_value" id="salvage_value" required="required"/></td>
                                 </tr>
                                 <tr><td>&nbsp;</td></tr>
                                 <tr>
                                     <td id="fnts">Asset life:</td>
-                                    <td><input type="text" name="asset_life" id="txt3" required="required"/></td>
+                                    <td><input type="text" name="asset_life" id="asset_life" required="required"/></td>
                                 </tr>
                                 <tr><td>&nbsp;</td></tr>
                                 <tr>
                                     <td id="fnts">Depreciation value:</td>
-                                    <td><input type="text" name="dep_value" id="txt3" required="required"/></td>
+                                    <td><input type="text" name="dep_value" id="dep_value" required="required"/></td>
                                 </tr>
                                 </table>
                         </fieldset>
@@ -76,7 +76,7 @@
                    </tr>
          </table>
                 
-                   <div><input type="submit" class="button" value="calculate"></div>
+                   <div><input type="button" class="button" value="calculate" id="btnCalculate" name="btnCalculate"></div>
         </form>
          <div class="block"></div>
                 </div>
@@ -88,5 +88,18 @@
     <div class="clear"></div>
   </div>
 </div>
+
+
+   <script type="text/javascript" src='js/jquery-1.11.1.js'></script>
+       
+        <script type="text/javascript">
+                
+            $(document).ready(function(){
+                $("#btnCalculate").click(function(){
+                    var dep_value= (parseFloat($("#asset_price").val())+ parseFloat($("#salvage_value").val(),10))/parseFloat($("#asset_life").val(),10);
+                   $("#dep_value").val(dep_value);
+                });
+            });
+        </script>
     </body>
 </html>

@@ -89,7 +89,7 @@
         </script> 
 
 
-        <link rel="stylesheet" href="css/datePicker.css" type="text/css" />
+<!--        <link rel="stylesheet" href="css/datePicker.css" type="text/css" />
         <script src="js/jquery/date.js" type="text/javascript"></script>
         <script src="js/jquery/jquery.datePicker.js" type="text/javascript"></script>
         <script type="text/javascript" charset="utf-8">
@@ -158,7 +158,7 @@
                         // and update the datePicker to reflect it...
                         $('#d').trigger('change');
                     });
-        </script>
+        </script>-->
 
 
         <script src="js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>

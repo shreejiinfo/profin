@@ -10,15 +10,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Login Form</title>
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/Admin/css/screen.css" type="text/css" media="screen" title="default" />
 
-<script src="js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
-
-
-<script src="js/jquery/custom_jquery.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/Admin/js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
 
 
-<script src="js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/Admin/js/jquery/custom_jquery.js" type="text/javascript"></script>
+
+
+<script src="${pageContext.request.contextPath}/Admin/js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 $(document).pngFix( );
@@ -58,6 +58,10 @@ $(document).pngFix( );
 		<tr>
 			<th></th>
                         <td><input type="submit" class="submit-login"  /></td>
+		</tr>
+               <tr>
+			<th></th>
+                        <td>${msg}</td>
 		</tr>
 		</table>
 	</div>
