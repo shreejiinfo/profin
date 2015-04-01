@@ -10,13 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Registration Form</title>
-
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/Admin/css/default.css">
         <script type='text/javascript' src='/Admin/dwr/engine.js'></script>
         <script type='text/javascript' src='/Admin/dwr/interface/EvaluationAjax.js'></script>
         <script type='text/javascript' src='/Admin/dwr/util.js'></script>
-        <script type='text/javascript' src='Admin/js/jquery/validate.js'></script>
-            <script type='text/javascript' src='/Admin/js/validate.js'></script>
-
+        
         <script>
             var LoadCountry = function(data) {
 //                alert();
@@ -36,18 +34,19 @@
                 dwr.util.removeAllOptions('city1');
                 dwr.util.addOptions('city1', data, 'cityId', 'cityName');
             }
-        </script>
+        </script>   
 
 
-    <body onload="EvaluationAjax.countryShow(LoadCountry)">
-        <form action="${pageContext.request.contextPath}/RegistrationServlet" name="f1" method="post">
+   <body onload="EvaluationAjax.countryShow(LoadCountry)">
+       
         <%@include file="header.jsp" %>
 
         <div class="clear"></div>
 
         <div id="content-outer">
 
-            <div id="content">
+            <div id="content">     
+                <form action="${pageContext.request.contextPath}/RegistrationServlet" name="f1" method="post" id="f1">
                 <div id="page-heading"><h1>Registration Detail</h1></div>
 
 
@@ -76,12 +75,12 @@
                                             <table border="0" cellpadding="0" cellspacing="0"  id="id-form">
                                                 <tr>
                                                     <th valign="top">Name *:</th>
-                                                    <td><input type="text" name="name" class="inp-form" required="required" onkeyup="isalpha(this)" /></td>
+                                                    <td><input type="text" name="name" class="inp-form" required="required" /></td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Contact *:</th>
-                                                    <td><input type="text" name="contact" class="inp-form" maxlength="15" required="required" onkeyup="isnum(this)" /></td>
+                                                    <td><input type="text" name="contact" class="inp-form" maxlength="15" required="required"/></td>
 
                                                 </tr>
                                                 <tr>
@@ -144,7 +143,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Date of joining *:</th>
-                                                    <td><input type="Date" class="inp-form" name="joining" required="required" onchange="doj(this)"/></td>
+                                                    <td><input type="text" name="joining" id="joining" class="inp-form" required="required"/></td>
 
                                                     <td></td>
                                                 </tr>
@@ -163,7 +162,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Birth date *:</th>
-                                                    <td><input type="Date" class="inp-form" name="birthdate" required="required" onchange="dob(this)"/></td>
+                                                    <td><input type="text" name="birthdate" id="birthdate" required="required" class="inp-form"/></td>
 
                                                     <td></td>
                                                 </tr>
@@ -186,19 +185,23 @@
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Email *:</th>
-                                                    <td><input type="text" class="inp-form" name="email" required="required"/></td>
+                                                    <td><input type="text" class="inp-form" name="email" required="required" id="email"/></td>
 
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Password *:</th>
-                                                    <td><input type="password" class="inp-form" name="password" required="required"/></td>
+                                                    <td><input type="password" class="inp-form" name="password" required="required" id="password"/></td>
 
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Re-enter Password *:</th>
+<<<<<<< HEAD
                                                     <td><input type="password" class="inp-form" name="re_enter_password" required="required" onblur="checkpass()"/></td>
+=======
+                                                    <td><input type="password" class="inp-form" name="re_enter_password" required="required" id ="re_enter_password"/></td>
+>>>>>>> cf0a7f4e1074a151048f6d808417179c59593e64
 
                                                     <td></td>
                                                 </tr>
@@ -206,8 +209,8 @@
                                                 <tr>
                                                     <th>&nbsp;</th>
                                                     <td valign="top">
-                                                        <input type="submit" value="" class="form-submit" />
-                                                        <input type="reset" value="" class="form-reset"  />
+                                                        <input type="button" value="submit" id="btnsub" class="form-submit"/>
+                                                        <input type="reset" value="" class="form-reset"/>
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -241,7 +244,8 @@
                         <th class="sized bottomright"></th>
                     </tr>
                 </table>
-
+</form>
+               
                 <div class="clear">&nbsp;</div>
 
             </div>
@@ -252,6 +256,116 @@
         <div class="clear">&nbsp;</div>        
 
         <%@include file="footer.jsp" %>
-        </form>
+        
+         
+        <script type="text/javascript" src='${pageContext.request.contextPath}/js/jquery-1.11.1.js'></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.validate.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/zebra_datepicker.js"></script>
+       
+        <script type="text/javascript">
+                
+            $(document).ready(function(){
+                
+                $( "#joining" ).Zebra_DatePicker({
+                    direction: 0   
+                });
+                
+                 $( "#birthdate" ).Zebra_DatePicker({
+                    direction: 0 
+                 });
+                
+                
+                $("#btnsub").click(function(){
+                    if($("#f1").valid()){
+                          if($("#joining").val() !== null && $("#joining").val() !==""){
+                              if($("#birthdate").val() !== null && $("#birthdate").val() !==""){
+                                $("#f1").submit();
+                            }else{
+                                alert("please provide birthdate date");        
+                            }
+                        }else{
+                            alert("please provide joining date");        
+                        }
+                    }
+                    //alert($("#f1").valid());
+                });
+            });
+            
+            $.validator.addMethod("pwcheck", function(value) {
+   return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+       && /\d/.test(value) // has a digit
+       
+//       return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(value);
+});
+
+
+    $.validator.addMethod("pwcheckallowedchars", function (value) {
+        return /^[a-zA-Z0-9!@#$%^&*()_=\[\]{};':"\\|,.<>\/?+-]+$/.test(value) // has only allowed chars letter
+    }, "The password contains non-admitted characters");
+    
+    $.validator.addMethod("pwcheckspechars", function (value) {
+        return /[!@#$%^&*()_=\[\]{};':"\\|,.<>\/?+-]/.test(value)
+    }, "The password must contain at least one special character");
+    
+	$.validator.addMethod("pwcheckconsecchars", function (value) {
+        return ! (/(.)\1\1/.test(value)) // does not contain 3 consecutive identical chars
+    }, "The password must not contain 3 consecutive identical characters");
+
+    $.validator.addMethod("pwchecklowercase", function (value) {
+        return /[a-z]/.test(value) // has a lowercase letter
+    }, "The password must contain at least one lowercase letter");
+    
+    $.validator.addMethod("pwcheckrepeatnum", function (value) {
+        return /\d{2}/.test(value) // has a lowercase letter
+    }, "The password must contain at least one lowercase letter");
+    
+    $.validator.addMethod("pwcheckuppercase", function (value) {
+        return /[A-Z]/.test(value) // has an uppercase letter
+    }, "The password must contain at least one uppercase letter");
+    
+    $.validator.addMethod("pwchecknumber", function (value) {
+        return /\d/.test(value) // has a digit
+    }, "The password must contain at least one number");
+
+    $.validator.addMethod("usernamecheckcharcter", function (value) {
+        return /^\d*[a-zA-Z][a-zA-Z0-9]*/.test(value) // has a digit
+    }, "The field must contain at least one character");
+
+
+            
+              $("#f1").validate({
+					errorClass:"errors",
+					rules: {
+                                              name:{
+                                                  required:true,
+                                                  usernamecheckcharcter:true
+                                              },
+                                              contact:{
+                                                  required:true,
+                                                  digits:true
+                                              },
+                                              birthdate:{
+                                                required:true  
+                                              },
+						email: {
+							required: true,
+							email: true,
+							minlength: 2
+						},
+						password: {
+							required: true,
+                                                        pwchecknumber: true,
+                                                        pwcheckspechars: true,
+                                                        pwcheckallowedchars: true,
+							minlength: 5
+						},
+						re_enter_password: {
+							required: true,
+							minlength: 5,
+							equalTo: "#password"
+						}
+					}
+               });
+            </script>
     </body>
 </html>

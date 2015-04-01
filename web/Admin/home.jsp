@@ -14,6 +14,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home Page</title>
+<<<<<<< HEAD
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/screen.css" type="text/css" media="screen" title="default" />
 <script>
     function log(){
@@ -22,6 +23,10 @@
         
     }
 </script>
+=======
+        <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
+      
+>>>>>>> cf0a7f4e1074a151048f6d808417179c59593e64
     </head>
     <body> 
         <%@include file="header.jsp" %>
@@ -38,7 +43,7 @@
 
                 <div id="page-heading">
                     <h1>Welcome Admin....!!!</h1>
-                </div>
+                </div>               
                 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
                     <tr>
                         <th rowspan="3" class="sized"><img src="${pageContext.request.contextPath}/Admin/images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>

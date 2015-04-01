@@ -34,8 +34,8 @@ public class depreciationinfodao {
                 
                 depreciationinfobean dbean=new depreciationinfobean();
                 dbean.setAsset_name(rs.getString(1));
+                System.out.println(rs.getString(2));
                 dbean.setPrice(rs.getString(2));
-                
                 ddata.add(dbean);
                 
             }
