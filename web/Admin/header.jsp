@@ -3,8 +3,14 @@
     Created on : Feb 25, 2015, 2:33:29 PM
     Author     : Bhargav
 --%>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="d" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<d:if test="${sessionScope.username == null}">
+    <d:redirect url="index.jsp"></d:redirect> 
+</d:if>
+<d:if test="${empty sessionScope.username}">
+    <d:redirect url="index.jsp"></d:redirect> 
+</d:if>
 <!DOCTYPE html>
 <html>
     <head>
@@ -213,7 +219,7 @@
                     <div class="nav-divider">&nbsp;</div>
                     <div class="showhide-account"><img src="${pageContext.request.contextPath}/Admin/images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" /></div>
                     <div class="nav-divider">&nbsp;</div>
-                    <a href="LogoutServlet" id="logout"><img src="${pageContext.request.contextPath}/Admin/images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
+                    <a href="${pageContext.request.contextPath}/LogoutServlet" id="logout"><img src="${pageContext.request.contextPath}/Admin/images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
                     <div class="clear">&nbsp;</div>
 
 

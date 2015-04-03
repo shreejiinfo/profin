@@ -23,8 +23,7 @@ public class AdminLoginDao {
     public static Statement smt = null;
     public static ResultSet rs = null;
 
-    public static int loginAutho(AdminLoginBean lbean) {
-        int id=0;
+    public static boolean loginAutho(AdminLoginBean lbean) {
         boolean flag = false;
         conn = ConnectionUtill.getconn();
         if (conn != null) {
@@ -36,7 +35,7 @@ public class AdminLoginDao {
                 String iquery = "select * from admin_master where username='" + lbean.getUsername() + "' and password='" + lbean.getPassword() + "'";
                 System.out.println("query" + iquery);
                 rs = smt.executeQuery(iquery);
-                while (rs.next()) {
+                if (rs.next()) {
                     flag = true;
                 }
 
@@ -46,7 +45,7 @@ public class AdminLoginDao {
             }
 
         }
-        return id;
+        return flag;
     }
 
     

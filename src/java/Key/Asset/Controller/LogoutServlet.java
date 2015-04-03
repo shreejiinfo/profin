@@ -25,11 +25,10 @@ public class LogoutServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
      
         HttpSession session=request.getSession();
-        System.out.println("user Exist:==="+session.getAttribute("id"));
-        session.removeAttribute("id");
-        System.out.println("REmove User:==="+session.getAttribute("id"));
+        if(session.getAttribute("username")!=null){
+            //code that u want to run after logout
+        }
         session.invalidate();
-
         RequestDispatcher rd=request.getRequestDispatcher("/Admin/index.jsp");
         rd.forward(request, response);
     }

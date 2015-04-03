@@ -6,33 +6,15 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="d" %>
-<d:if test="${id==null}">
-    <d:redirect url="index.jsp"></d:redirect> 
-</d:if>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home Page</title>
-<<<<<<< HEAD
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/screen.css" type="text/css" media="screen" title="default" />
-<script>
-    function log(){
-        f1.action="LogoutServlet";
-        f1.submit();
-        
-    }
-</script>
-=======
-        <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
-      
->>>>>>> cf0a7f4e1074a151048f6d808417179c59593e64
     </head>
     <body> 
         <%@include file="header.jsp" %>
-        
- <% int id=Integer.parseInt(session.getAttribute("id").toString());
-        %>
         <div class="clear"></div>
 
         <div class="clear"></div>

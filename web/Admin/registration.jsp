@@ -48,7 +48,7 @@
             <div id="content">     
                 <form action="${pageContext.request.contextPath}/RegistrationServlet" name="f1" method="post" id="f1">
                 <div id="page-heading"><h1>Registration Detail</h1></div>
-
+                    
 
                 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
                     <tr>
@@ -197,12 +197,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th valign="top">Re-enter Password *:</th>
-<<<<<<< HEAD
-                                                    <td><input type="password" class="inp-form" name="re_enter_password" required="required" onblur="checkpass()"/></td>
-=======
                                                     <td><input type="password" class="inp-form" name="re_enter_password" required="required" id ="re_enter_password"/></td>
->>>>>>> cf0a7f4e1074a151048f6d808417179c59593e64
-
                                                     <td></td>
                                                 </tr>
 

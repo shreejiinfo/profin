@@ -36,17 +36,14 @@ public class AdminLoginServlet extends HttpServlet {
         System.out.println("UserName:===="+lbean.getUsername());
         System.out.println("Password:===="+lbean.getPassword());
         
-        int id=AdminLoginDao.loginAutho(lbean);
-        
-        HttpSession session = request.getSession();
-        session.setAttribute("id", id);
-         System.out.println("id===="+id);
-        if(id>0)
-        {
+        boolean isUserAuthenticated=AdminLoginDao.loginAutho(lbean);
+        if(isUserAuthenticated)
+        {      
 //            request.setAttribute("user", username);
+             HttpSession session = request.getSession();
+             session.setAttribute("username", username);
             RequestDispatcher rd=request.getRequestDispatcher("Admin/home.jsp");
             rd.forward(request, response);
-           
         }
         else{
             request.setAttribute("msg","invalid username or password");
