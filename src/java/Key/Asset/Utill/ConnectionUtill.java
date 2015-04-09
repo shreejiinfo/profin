@@ -18,7 +18,7 @@ public class ConnectionUtill {
       public static String driverpath="com.mysql.jdbc.Driver";
     public static String path="jdbc:mysql://localhost:3306/key_asset";
     public static String uname="root";
-    public static String pwd="admin";
+    public static String pwd="";
     
     public static Connection getconn()
     {
