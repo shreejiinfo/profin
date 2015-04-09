@@ -70,7 +70,7 @@
                                                     <td>${ld.laptop_price}</td>
                                                     <td>${ld.p_date}</td>
                                                     <td>${ld.v_name}</td>
-                                                    <td>${ld.l_picture}</td>
+                                                    <td><img src="${pageContext.request.contextPath}/${ld.l_picture}" height="100" width="100"</td>
                                                 </tr>
                                             </d:forEach>
 

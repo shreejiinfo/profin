@@ -12,15 +12,17 @@
         <title>JSP Page</title>
         <link rel="stylesheet" type="text/css" href="css/default1.css"/>
         <script>
-            function callMcqTxt() {
-                document.getElementById("txtMcqDiv").style.display = "block";
+            function showLaptop() {
+                document.getElementById("divLaptop").style.display = "block";
+                document.getElementById("divPrinter").style.display = "none";
 
             }
           
             
        
-         function callMcqTxt1() {
-                document.getElementById("txtMcqDiv1").style.display = "block";
+         function showPrinter() {
+                document.getElementById("divPrinter").style.display = "block";
+                document.getElementById("divLaptop").style.display = "none";
 
             }
           
@@ -29,24 +31,30 @@
 
     <body>
         <%@include file="opheader3.jsp" %>
-        <form method="post" action="Assetregistrationservlet" name="f1"  class="register">
-        <table align="center">
+        <div style="padding-left: 200px;">
+            <table>
                 <tr> 
                     <th colspan="2" style="color: #abda0f; font-size: 25px; padding-left: 230px; ">Electronics Registration</th>
                 </tr>
-                <tr><td>&nbsp;</td></tr></table>
-
-            <input type="radio" name="gen" id="radio1" onclick="callMcqTxt()">Laptop<br>
-     <input type="radio" name="gen" id="radio2"onclick="callMcqTxt1()">Printer<br>   
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td><input type="radio" name="gen" id="radio1" checked onclick="showLaptop()">Laptop</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="gen" id="radio2"onclick="showPrinter()">Printer</td>
+                </tr>
+        </table>
+        </div>
 
         <br>
         
-        <div id="txtMcqDiv"  name="txtdiv" style="display: none" >
+        <div id="divLaptop"  name="divLaptop">
+            <form method="post" action="Assetregistrationservlet" name="f1"  class="register" enctype="multipart/form-data">
             <table>
                 <tr><td>&nbsp;</td></tr>
                                              <tr>
                                                      <td style="width:30%;">Laptop Brand*:</td>
-                                                     <td><input type="text" name="L_Brand" class="inptxt" required="required"/></td>
+                                                     <td><input type="text" name="L_Brand" class="inptxt" required="required" id="L_Brand"/></td>
                                                      <td>Laptop Type*:</td>
                                                      <td><input type="text" name="L_Type" class="inptxt" required="required"/></td>
                                               </tr>
@@ -104,30 +112,16 @@
                                                     <td>Picture*:</td>
                                                     <td><input type="file" name="L_Picture" class="inptxt" required="required"/></td>
                                                 </tr>
+                                                <tr>
+                                                    <td colspan="2"><input type="submit" class="button" value="Register" ></td>
+                                                </tr>
                 
             </table>
+           </form>
         </div>
-           
 
- <tr><td>&nbsp;</td></tr>
-        <tr><td><div>
-        <input type="submit" class="button" value="Register" >
-         </div></td></tr>
-        </form>
-        
-        <form method="post" action="PrinterServlet" name="f1"  class="register">
-        <table align="center">
-                <tr> 
-                    <th colspan="2" style="color: #abda0f; font-size: 25px; padding-left: 230px; ">Electronics Registration</th>
-                </tr>
-                <tr><td>&nbsp;</td></tr></table>
-
-            
-        
-
-        <br>
-        
-        <div id="txtMcqDiv1" name="txtdiv" style="display: none">
+        <div id="divPrinter" name="divPrinter" style="display: none">
+            <form method="post" action="PrinterServlet" name="f1"  class="register">
             <table>
                 <tr><td>&nbsp;</td></tr>
                                              <tr>
@@ -170,17 +164,13 @@
                                                     <td>L_Picture:</td>
                                                     <td><input type="file" name="p_Picture" class="inptxt" required="required"/></td>
                                                 </tr>
+                                                <tr>
+                                                    <td colspan="2"><input type="submit" class="button" value="Register" ></td>
+                                                </tr>
                 
             </table>
+            </form>
         </div>
-           
-
- <tr><td>&nbsp;</td></tr>
- <tr><td>&nbsp;</td></tr>
-        <tr><td><div>
-        <input type="submit" class="button" value="Register" >
-         </div></td></tr>
-                </form>
         <div id="copyright">
       <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="#">Domain Name</a></p>
        <br class="clear" />
